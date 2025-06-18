@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OceanWave Resort | Menu</title>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Raleway:wght@300;400;600;700&display=swap" as="style">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Raleway:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="img/logo.jpeg" type="image/x-icon">
+    
+    <!-- Minified CSS -->
+    <style>
+        :root{--deep-blue:#025E73;--teal:#03A696;--seafoam:#88D9D9;--sand:#F2D7B6;--coral:#F26B6B;--light:#F2F2F2;--dark:#011F26;--transition:all .4s cubic-bezier(.175,.885,.32,1.275)}*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Raleway',sans-serif;background-color:var(--light);color:var(--dark);line-height:1.6}h1,h2,h3,h4{font-family:'Playfair Display',serif;font-weight:700}header{width:100%;background:rgba(1,31,38,.95);padding:1rem 5%;display:flex;justify-content:space-between;align-items:center}.logo{font-size:1.8rem;font-weight:900;color:var(--seafoam);text-decoration:none;display:flex;align-items:center}.logo:hover{color:var(--coral);transform:scale(1.05)}.logo i{margin-right:8px;color:var(--coral);font-size:1.5rem;transition:var(--transition)}.logo:hover i{transform:rotate(20deg)}.section-title{text-align:center;margin:3rem 0 2rem}.section-title h2{font-size:2.5rem;color:var(--deep-blue);display:inline-block;position:relative;transition:var(--transition)}.section-title h2::after{content:'';position:absolute;bottom:-15px;left:50%;transform:translateX(-50%);width:60px;height:4px;background:var(--coral);transition:var(--transition)}.menu-container{max-width:1200px;margin:0 auto}.menu-categories{display:flex;justify-content:center;flex-wrap:wrap;margin-bottom:2rem}.category-btn{background:transparent;border:2px solid var(--teal);color:var(--teal);padding:.7rem 1.5rem;margin:.3rem;border-radius:50px;cursor:pointer;font-weight:600;transition:var(--transition);font-size:.9rem}.category-btn.active,.category-btn:hover{background:var(--teal);color:var(--light);transform:scale(1.05)}.menu-items{display:grid;grid-template-columns:1fr;gap:1.5rem}.menu-item{background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.1);transition:var(--transition);display:flex;flex-direction:column}.menu-item:hover{transform:translateY(-10px) scale(1.02);box-shadow:0 20px 40px rgba(0,0,0,.2)}.menu-item-image{width:100%;height:200px;overflow:hidden}.menu-item-image img{width:100%;height:100%;object-fit:cover;transition:var(--transition)}.menu-item:hover .menu-item-image img{transform:scale(1.1)}.menu-item-content{padding:1.5rem;transition:var(--transition)}.menu-item-content:hover{background:var(--sand)}.menu-item h3{font-size:1.4rem;color:var(--deep-blue);margin-bottom:.5rem;transition:var(--transition)}.menu-item h3:hover{color:var(--coral)}.menu-item-price{color:var(--coral);font-weight:700;font-size:1.2rem;margin-bottom:.5rem}.menu-item p{color:#666;font-size:.95rem}footer{background:#011F26;color:#F2F2F2;text-align:center;padding:1.5rem 0;margin-top:3rem;font-size:1rem}@media (min-width:768px){.section-title h2{font-size:3rem}.menu-items{grid-template-columns:repeat(auto-fit,minmax(350px,1fr))}.menu-item{flex-direction:row}.menu-item-image{width:40%;height:auto}.menu-item-content{width:60%}}@media (max-width:767px){.section-title h2{font-size:2rem}}
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo"><i class="fas fa-water"></i> OceanWave</a>
+    </header>
+    
+    <section id="menu" class="menu">
+        <div class="section-title">
+            <h2>Coastal Cuisine</h2>
+        </div>
+        
+        <div class="menu-container">
+            <div class="menu-categories">
+                <button class="category-btn active" data-category="all">All</button>
+                <button class="category-btn" data-category="breakfast">Breakfast</button>
+                <button class="category-btn" data-category="lunch">Lunch</button>
+                <button class="category-btn" data-category="dinner">Dinner</button>
+                <button class="category-btn" data-category="drinks">Drinks</button>
+            </div>
+            
+            <div class="menu-items">
+                <!-- Menu items with lazy loading -->
+                <div class="menu-item" data-category="breakfast">
+                    <div class="menu-item-image">
+                        <img src="img/tropicalbowl.jpeg" alt="Tropical Breakfast Bowl" loading="lazy">
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Tropical Sunrise Bowl</h3>
+                        <div class="menu-item-price">Ksh 2080</div>
+                        <p>Fresh papaya, mango, banana, coconut yogurt, granola, and local honey</p>
+                    </div>
+                </div>
+                
+                <div class="menu-item" data-category="lunch">
+                    <div class="menu-item-image">
+                        <img src="img/seafoodplatter.jpeg" alt="Seafood Platter" loading="lazy">
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Diani Seafood Platter</h3>
+                        <div class="menu-item-price">Ksh 4160</div>
+                        <p>Grilled lobster, prawns, calamari, and fish with coconut rice and mango salsa</p>
+                    </div>
+                </div>
+                
+                <div class="menu-item" data-category="dinner">
+                    <div class="menu-item-image">
+                        <img src="img/swahilicurry.jpeg" alt="Swahili Curry" loading="lazy">
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Swahili Coconut Curry</h3>
+                        <div class="menu-item-price">Ksh 3380</div>
+                        <p>Chicken or vegetable curry with coconut milk, served with chapati and kachumbari</p>
+                    </div>
+                </div>
+                
+                <div class="menu-item" data-category="drinks">
+                    <div class="menu-item-image">
+                        <img src="img/oceanbreeze.jpeg" alt="Tropical Cocktail" loading="lazy">
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Ocean Breeze Cocktail</h3>
+                        <div class="menu-item-price">Ksh 1820</div>
+                        <p>Local rum, fresh pineapple, coconut cream, and a splash of blue curaçao</p>
+                    </div>
+                </div>
+                
+                <div class="menu-item" data-category="breakfast">
+                    <div class="menu-item-image">
+                        <img src="img/avocadotoast.jpeg" alt="Avocado Toast" loading="lazy">
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Avocado Toast</h3>
+                        <div class="menu-item-price">Ksh 1560</div>
+                        <p>Smashed avocado on sourdough with poached eggs and chili flakes</p>
+                    </div>
+                </div>
+                
+                <div class="menu-item" data-category="breakfast">
+                    <div class="menu-item-image">
+                        <img src="img/pancakestack.jpeg" alt="Pancake Stack" loading="lazy">
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Pancake Stack</h3>
+                        <div class="menu-item-price">Ksh 1820</div>
+                        <p>Fluffy pancakes with tropical fruit and maple syrup</p>
+                    </div>
+                </div>
+                
+                <div class="menu-item" data-category="lunch">
+                    <div class="menu-item-image">
+                        <img src="img/fishtacos.jpeg" alt="Grilled Fish Tacos" loading="lazy">
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Grilled Fish Tacos</h3>
+                        <div class="menu-item-price">Ksh 2340</div>
+                        <p>Fresh catch in soft tortillas with slaw and lime crema</p>
+                    </div>
+                </div>
+                
+                <div class="menu-item" data-category="lunch">
+                    <div class="menu-item-image">
+                        <img src="img/mangochickensalad.jpeg" alt="Mango Chicken Salad" loading="lazy">
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Mango Chicken Salad</h3>
+                        <div class="menu-item-price">Ksh 2600</div>
+                        <p>Grilled chicken with mango, greens, and citrus dressing</p>
+                    </div>
+                </div>
+                
+                <div class="menu-item" data-category="lunch">
+                    <div class="menu-item-image">
+                        <img src="img/prawnpasta.jpeg" alt="Prawn Pasta" loading="lazy">
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Prawn Pasta</h3>
+                        <div class="menu-item-price">Ksh 2860</div>
+                        <p>Linguine with prawns, garlic, and chili in white wine sauce</p>
+                    </div>
+                </div>
+                
+                <div class="menu-item" data-category="dinner">
+                    <div class="menu-item-image">
+                        <img src="img/grilledoctopus.jpeg" alt="Grilled Octopus" loading="lazy">
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Grilled Octopus</h3>
+                        <div class="menu-item-price">Ksh 3640</div>
+                        <p>Tender octopus with roasted potatoes and herb oil</p>
+                    </div>
+                </div>
+                
+                <div class="menu-item" data-category="dinner">
+                    <div class="menu-item-image">
+                        <img src="img/beefpilau.jpeg" alt="Beef Pilau" loading="lazy">
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Beef Pilau</h3>
+                        <div class="menu-item-price">Ksh 3120</div>
+                        <p>Spiced rice with tender beef and caramelized onions</p>
+                    </div>
+                </div>
+                
+                <div class="menu-item" data-category="dinner">
+                    <div class="menu-item-image">
+                        <img src="img/vegetable biryani.jpeg" alt="Vegetable Biryani" loading="lazy">
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Vegetable Biryani</h3>
+                        <div class="menu-item-price">Ksh 2600</div>
+                        <p>Aromatic rice with mixed vegetables and raita</p>
+                    </div>
+                </div>
+                
+                <div class="menu-item" data-category="dinner">
+                    <div class="menu-item-image">
+                        <img src="img/lambkebabs.jpeg" alt="Lamb Kebabs" loading="lazy">
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Lamb Kebabs</h3>
+                        <div class="menu-item-price">Ksh 3380</div>
+                        <p>Marinated lamb skewers with flatbread and tzatziki</p>
+                    </div>
+                </div>
+                
+                <div class="menu-item" data-category="drinks">
+                    <div class="menu-item-image">
+                        <img src="img/mangomojito.jpeg" alt="Mango Mojito" loading="lazy">
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Mango Mojito</h3>
+                        <div class="menu-item-price">Ksh 1560</div>
+                        <p>Fresh mango, mint, rum, and soda water</p>
+                    </div>
+                </div>
+                
+                <div class="menu-item" data-category="drinks">
+                    <div class="menu-item-image">
+                        <img src="img/coconutcooler.jpeg" alt="Coconut Cooler" loading="lazy">
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Coconut Cooler</h3>
+                        <div class="menu-item-price">Ksh 1300</div>
+                        <p>Coconut water, lime, and a hint of ginger</p>
+                    </div>
+                </div>
+                
+                <div class="menu-item" data-category="drinks">
+                    <div class="menu-item-image">
+                        <img src="img/passionfruitspritz.jpeg" alt="Passion Fruit Spritz" loading="lazy">
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Passion Fruit Spritz</h3>
+                        <div class="menu-item-price">Ksh 1690</div>
+                        <p>Passion fruit, prosecco, and a splash of soda</p>
+                    </div>
+                </div>
+                
+                <div class="menu-item" data-category="breakfast">
+                    <div class="menu-item-image">
+                        <img src="img/coastal omlette.jpeg" alt="Omelette" loading="lazy">
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Coastal Omelette</h3>
+                        <div class="menu-item-price">Ksh 1950</div>
+                        <p>Three-egg omelette with seafood and herbs</p>
+                    </div>
+                </div>
+                
+                <div class="menu-item" data-category="lunch">
+                    <div class="menu-item-image">
+                        <img src="img/crabcakes.jpeg" alt="Crab Cakes" loading="lazy">
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Crab Cakes</h3>
+                        <div class="menu-item-price">Ksh 2470</div>
+                        <p>Golden crab cakes with remoulade sauce</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        &copy;2025 OceanWave Resort.
+    </footer>
+
+    <!-- Inline JavaScript for menu filtering -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const categoryButtons = document.querySelectorAll('.category-btn');
+            const menuItems = document.querySelectorAll('.menu-item');
+            
+            // Initially show all menu items
+            menuItems.forEach(item => item.style.display = '');
+            
+            categoryButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    categoryButtons.forEach(btn => btn.classList.remove('active'));
+                    
+                    // Add active class to clicked button
+                    this.classList.add('active');
+                    
+                    const category = this.getAttribute('data-category');
+                    
+                    // Show/hide menu items based on category
+                    menuItems.forEach(item => {
+                        if (category === 'all' || item.getAttribute('data-category') === category) {
+                            item.style.display = '';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
